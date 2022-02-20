@@ -1,0 +1,43 @@
+//- require data:
+    projects = { "id": { name, language, time, demoURL, githubURL, description, details, demoPics: [title, src] }, ...}
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title My Projects | Frances's Website
+        link(rel="stylesheet" type="text/css" href="/css/projects.css")
+        link(rel="icon" href="/images/mainIcon.png")
+
+    body
+        include ./partials/navbar
+
+        #main
+            each project, id in projects
+                .project
+                    .label Name: 
+                        .name #{project.name}
+                    .label URL:
+                        a.url(href=`${demoURL}` target="_blank") [Demo]
+                        a.url(href=`${githubURL}` target="_blank") [GitHub Code]
+                    .label Language: 
+                        .language #{project.language}
+                    .label Time: 
+                        .time #{project.time}
+                    .label Demo:
+                    .demo(id=`demo-${id}`)
+                        each pic, id in project.demoPics
+                            img.demo-pic(src=`${pic.src}` alt=`${pic.title}` onclick=`displayModal("${id}", "${id}")`)
+                    .label Description: 
+                        .description !{project.description}
+                    .label Details: 
+                        .details !{project.details}
+
+            #demo-modal
+                span#modal-close(onclick="closeModal()") ×
+                img#modal-pic
+                #modal-caption
+                #modal-prev-next
+
+        script(src=`/js/projects.js`)
+        script.
+            document.getElementById("projects-page").classList.add("chosen-page");

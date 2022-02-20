@@ -1,0 +1,42 @@
+//- require data:
+    messages - [{name: String, time: Date, *email: String, privacy: boolean, content: string}, ...]
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Guestbook | Frances's Website
+        link(rel="stylesheet" type="text/css" href="/css/guestbook.css")
+        link(rel="icon" href="/images/guestbook-icon.png")
+
+    body
+        include ./partials/navbar
+
+        div#main
+            #messages
+                each message in messages
+                    .message
+                        .time #{message.time.toUTCString()}
+                        .name #{message.name}
+                        if message.email
+                            a.email(href=`mailto:${message.email}`) #{message.email}
+                        .content #{message.content}
+
+            form#new-msg-form
+                label.labels(for="form-name") Name:
+                input(type="text" id="form-name" name="name")
+                label.labels(for="form-email") Email:
+                input(type="text" id="form-email" name="email")
+                label.labels(for="form-privacy" title="")
+                    abbr#private-hint(title="Private messages will not be displayed here") Private:
+                input.radios(type="radio" id="form-true" name="privacy")
+                label.private-labels(for="form-true") Yes
+                input.radios(type="radio" id="form-false" name="privacy" checked)
+                label.private-labels(for="form-false") No
+                input(type="button" id="button" value="Send" onclick="sendMessage()")
+                br
+                label.labels(for="form-message" id="form-msg-label") Message:
+                textarea(id="form-message" name="content" rows="5" cols="95" maxlength="500")
+
+        script(src=`/js/guestbook.js`)
+        script.
+            document.getElementById("guestbook-page").classList.add("chosen-page");

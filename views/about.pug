@@ -1,0 +1,32 @@
+//- require data:
+    updates - [{title: String, date: String, description: string}, ...]
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title About | Frances's Website
+        link(rel="stylesheet" type="text/css" href="/css/about.css")
+        link(rel="icon" href="/images/mainIcon.png")
+
+    body
+        include ./partials/navbar
+
+        div#main
+            h2#about-website About The Website
+            #about-website-content
+                | Unless otherwise noted, the code for the projects displayed on this website was completed independently by myself.
+                | Some of the assignments sourced for the project were provided with code frameworks by the professors and will be displayed and noted after obtaining the professors' permissions.
+                br
+                | Thanks to <a href="https://www.flaticon.com">flaticon</a>, <a href="https://iconscout.com">iconscout</a>, <a href="https://www.freepik.com">freepik</a> for their free icons and background images used in my project(s).
+                br
+                | Thanks to <a href="https://unsplash.com/photos/rCbdp8VCYhQ">Andy Holmes</a> for the wonderful photographs.
+
+            h2#updates Updates
+            each item in updates
+                .update
+                    .date #{item.date}
+                    .title #{item.title}
+                    .details #{item.description}
+            
+        script.
+            document.getElementById("about-this-website").classList.add("chosen-page");

@@ -1,0 +1,95 @@
+.message {
+    border: 5px double rgb(60,90,170);
+    padding: 5px 5px 10px 10px;
+    margin: 10px 0px 20px;
+    font-family: 'Georgia', serif;
+    font-size: large;
+    line-height: 30px;
+}
+
+.message .time {
+    position: relative;
+    left: 585px;
+    width: fit-content;
+    height: 0px;
+    color: rgb(60,90,170);
+    font-size: medium;
+}
+
+.message .content {
+    padding: 0px 10px;
+    background: rgba(255,235,205,0.5);
+    font-style: italic;
+}
+
+.message .name, .message .email {
+    padding: 0px 10px;
+    display: inline;
+}
+
+#new-msg-form {
+    text-align: center;
+    border: 3px dashed;
+    margin: 50px 0px;
+    padding: 10px 0px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: large;
+    color: rgb(60,90,170);
+}
+
+#new-msg-form .labels {
+    padding: 0px 10px 0px 20px;
+}
+
+#new-msg-form .private-labels {
+    padding: 0px 15px 0px 5px;
+}
+
+#new-msg-form #form-name, #new-msg-form #form-email {
+    border-radius: 5px;
+    vertical-align: text-bottom;
+    border: 1px solid darkblue;
+    text-align: center;
+    font-family: 'Inter';
+}
+
+#new-msg-form #form-message {
+    resize: none;
+    vertical-align: middle;
+    border-radius: 5px;
+    border: 1px solid darkblue;
+    margin: 10px;
+    font-family: 'Inter';
+}
+
+#private-hint:hover {
+    cursor: help;
+}
+
+#form-msg-label::before {
+    position: relative;
+    right: 1px;
+    content: "*";
+    font-weight: bold;
+    font-family: monospace;
+    color: red;
+}
+
+#new-msg-form #button {
+    margin-left: 5px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+#new-msg-form #button:hover {
+    box-shadow: 0 0 5px cornflowerblue;
+}
+
+#new-msg-form #button:active {
+    transform: translate(0.5px, 1px);
+}

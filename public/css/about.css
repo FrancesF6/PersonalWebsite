@@ -1,0 +1,30 @@
+#updates {
+    font-family: 'Inter';
+    margin: 50px 0px 10px 0px;
+}
+
+.update {
+    font-family: 'Georgia', serif;
+    font-size: large;
+    padding: 10px 0px 20px;
+}
+
+.date {
+    font-family: monospace;
+    padding: 5px 0px;
+}
+
+.title {
+    font-weight: bold;
+    padding: 5px 0px;
+}
+
+#about-website {
+    font-family: 'Inter';
+    margin: 10px 0px;
+}
+
+#about-website-content {
+    font-size: large;
+    line-height: 30px;
+}
