@@ -3,10 +3,10 @@ let modalPic = document.getElementById("modal-pic");
 let modalCaption = document.getElementById("modal-caption");
 let modalChoose = document.getElementById("modal-prev-next");
 
-function displayModal(projectURL, picID) {
+function displayModal(prjID, picID) {
     modal.style.display = "block";
     
-    let demo = document.getElementById(`demo-${projectURL}`);
+    let demo = document.getElementById(`demo-${prjID}`);
     let numPics = demo.childNodes.length;
     let demoPic = demo.childNodes[picID];
     modalPic.src = demoPic.src;
@@ -15,8 +15,8 @@ function displayModal(projectURL, picID) {
     modalCaption.innerHTML = demoPic.alt;
 
     modalChoose.innerHTML = '';
-    if (picID > 0) modalChoose.innerHTML += `<span id="modal-previous" style="display: block;" onclick="displayModal('${projectURL}', '${Number(picID)-1}')">&lt;</span>`;
-    if (picID < numPics-1) modalChoose.innerHTML += `<span id="modal-next" style="display: block;" onclick="displayModal('${projectURL}', '${Number(picID)+1}')">&gt;</span>`;
+    if (picID > 0) modalChoose.innerHTML += `<span id="modal-previous" style="display: block;" onclick="displayModal('${prjID}', '${Number(picID)-1}')">&lt;</span>`;
+    if (picID < numPics-1) modalChoose.innerHTML += `<span id="modal-next" style="display: block;" onclick="displayModal('${prjID}', '${Number(picID)+1}')">&gt;</span>`;
 }
 
 function closeModal() {

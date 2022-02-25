@@ -16,17 +16,20 @@ html(lang="en")
                 .project
                     .label Name: 
                         .name #{project.name}
-                    .label URL:
-                        a.url(href=`${demoURL}` target="_blank") [Demo]
-                        a.url(href=`${githubURL}` target="_blank") [GitHub Code]
+                    .label URL: 
+                        if project.demoURL
+                            a.url(href=`${project.demoURL}` target="_blank") Demo
+                            | &nbsp; &nbsp;
+                        if project.githubURL
+                            a.url(href=`${project.githubURL}` target="_blank") GitHub
                     .label Language: 
                         .language #{project.language}
                     .label Time: 
                         .time #{project.time}
-                    .label Demo:
+                    .label Screenshots:
                     .demo(id=`demo-${id}`)
-                        each pic, id in project.demoPics
-                            img.demo-pic(src=`${pic.src}` alt=`${pic.title}` onclick=`displayModal("${id}", "${id}")`)
+                        each pic, picId in project.demoPics
+                            img.demo-pic(src=`${pic.src}` alt=`${pic.title}` onclick=`displayModal("${id}", "${picId}")`)
                     .label Description: 
                         .description !{project.description}
                     .label Details: 
