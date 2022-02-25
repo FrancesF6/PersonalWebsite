@@ -36,7 +36,7 @@ app.post('/guestbook', saveGuestMessage);   // receive a new guest message and s
 
 function renderProjects(req, res) {
     // read projects from json file
-    let projects = require("../json/projects.json");
+    let projects = require("/json/projects.json");
     if (projects == null) {
         res.status(500).send("Server Error.");
     } else {
