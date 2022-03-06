@@ -1,5 +1,5 @@
 //- require data:
-    projects = { "id": { name, language, time, demoURL, githubURL, description, details, demoPics: [title, src] }, ...}
+    projects = { "id": { name, language, time, demoURL(opt), githubURL(opt), about, description, details(opt), demoPics: [title, src] }, ...}
 
 html(lang="en")
     head
@@ -16,7 +16,7 @@ html(lang="en")
                 .project
                     .label Name: 
                         .name #{project.name}
-                    .label URL: 
+                    .label-url URL: 
                         if project.demoURL
                             a.url(href=`${project.demoURL}` target="_blank") Demo
                             | &nbsp; &nbsp;
@@ -24,16 +24,22 @@ html(lang="en")
                             a.url(href=`${project.githubURL}` target="_blank") GitHub
                     .label Language: 
                         .language #{project.language}
-                    .label Time: 
+                    .label-time Time: 
                         .time #{project.time}
-                    .label Screenshots:
-                    .demo(id=`demo-${id}`)
-                        each pic, picId in project.demoPics
-                            img.demo-pic(src=`${pic.src}` alt=`${pic.title}` onclick=`displayModal("${id}", "${picId}")`)
-                    .label Description: 
-                        .description !{project.description}
-                    .label Details: 
-                        .details !{project.details}
+                    if project.about
+                        .label About: 
+                            .about #{project.about}
+                    if project.demoPics.length > 0
+                        button.expand(id=`demo-${id}` onclick=`expandCollapse(this)`) Screenshots &#9656;
+                        .demo(id=`${id}-demo`)
+                            each pic, picId in project.demoPics
+                                img.demo-pic(src=`${pic.src}` alt=`${pic.title}` onclick=`displayModal("${id}", "${picId}")`)
+                    if project.description
+                        button.expand(id=`des-${id}` onclick=`expandCollapse(this)`) Description &#9656;
+                        .description(id=`${id}-des`) !{project.description}
+                    if project.details
+                        button.expand(id=`det-${id}` onclick=`expandCollapse(this)`) Details &#9656;
+                        .details(id=`${id}-det`) !{project.details}
 
             #demo-modal
                 span#modal-close(onclick="closeModal()") ×

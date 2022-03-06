@@ -12,7 +12,7 @@
     display: inline;
 }
 
-#my-info, #purpose, #some-links {
+#my-info, #purpose {
     line-height: 30px;
     display: inline-block;
     font-weight: normal;

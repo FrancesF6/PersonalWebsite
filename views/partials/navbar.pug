@@ -1,9 +1,9 @@
 link(rel="stylesheet" type="text/css" href="/css/partials/navbar.css")
-div#top-header
+#top-header
     div#website-title Frances's Website 
         #version v1.0
 
-div#left-navbar
+#left-navbar
     a.navbar-page(href="/" id="home-page") Home
     |
     a.navbar-page(href="/projects" id="projects-page") My Projects
@@ -12,5 +12,11 @@ div#left-navbar
     |
     a.navbar-page(href="/about" id="about-this-website") About
     |
+
+    #left-navbar-icons
+        a(href="https://github.com/FrancesF6" target="_blank")
+            img.navbar-icon-img(src="/images/github.png")
+        a(href="https://leetcode.com/FrancesF6" target="_blank")
+            img.navbar-icon-img(src="/images/leetcode.png")
 
 //- after importing navbar.pug, other pug must have a parallel div#main

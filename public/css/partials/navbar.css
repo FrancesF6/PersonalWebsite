@@ -62,6 +62,15 @@ body {
     content: ">";
 }
 
+#left-navbar-icons {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.navbar-icon-img {
+    width: 30px;
+    margin: 10px;
+}
 
 /* in other pug, not navbar.pug */
 #main {

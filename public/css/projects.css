@@ -1,35 +1,58 @@
 .project {
-    /* display: flex;
-    flex-direction: column; */
     padding: 5px;
     margin: 0px 10px 50px 10px;
     border: 4px dotted black;
     font-family: 'Trebuchet MS', sans-serif;
     font-size: large;
+    position: relative;
 }
+
 
 .project .label {
     padding: 10px;
     font-weight: bold;
 }
 
+.project .label-url, .project .label-time {
+    padding: 10px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+}
+
+.project .label-url {
+    top: 4;
+}
+
+.project .label-time {
+    top: 45;
+}
+
+.project .label-time {
+    position: absolute;
+    left: 50%;
+    top: 45;
+}
+
+
 .project .url {
     display: inline;
     font-family: 'Comic Sans MS', sans-serif;
+    font-weight: normal;
     color: royalblue;
 }
 
-.project .name, .project .language, .project .time {
+.project .name, .project .language, .project .time , .project .about{
     display: inline;
     font-weight: normal;
     color: rgb(60,90,170);
 }
 
 .project .description, .project .details {
+    display: none;   /*not display initially*/
     font-family: 'Georgia', serif;
-    padding: 10px 0px;
+    padding: 0px 10px 10px 10px;
     line-height: 25px;
-    font-weight: normal;
     color: rgb(60,90,170);
 }
 
@@ -40,9 +63,20 @@
 }
 
 .demo {
-    display: flex;
+    display: none;   /*not display initially*/
     flex-flow: row wrap;
+    /* display: flex; */
     /* justify-content: center; */
+}
+
+.expand, .collapse {
+    background: none;
+    border: none;
+    padding: 10px;
+    display: block;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: bold;
 }
 
 .demo-pic {
