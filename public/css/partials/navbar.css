@@ -35,7 +35,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     width: 200px;
-    height: calc(100% - 50px);
+    height: 100%;
     padding: 10px 10px 10px 20px;
     z-index: 1;
     background: floralwhite;
@@ -74,9 +74,12 @@ body {
 
 /* in other pug, not navbar.pug */
 #main {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
     margin-left: 230px;
     padding: 20px 60px;
-    min-height: calc(100% - 116px);
+    min-height: 100%;
     height: max-content;
     background: white;
 }

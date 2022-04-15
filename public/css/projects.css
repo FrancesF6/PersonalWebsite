@@ -1,39 +1,24 @@
 .project {
+    width: -webkit-fill-available;
     padding: 5px;
     margin: 0px 10px 50px 10px;
     border: 4px dotted black;
     font-family: 'Trebuchet MS', sans-serif;
     font-size: large;
-    position: relative;
 }
 
+.info-boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .project .label {
     padding: 10px;
     font-weight: bold;
+    min-width: 47.5%;
+    position: relative;
 }
-
-.project .label-url, .project .label-time {
-    padding: 10px;
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-}
-
-.project .label-url {
-    top: 4;
-}
-
-.project .label-time {
-    top: 45;
-}
-
-.project .label-time {
-    position: absolute;
-    left: 50%;
-    top: 45;
-}
-
 
 .project .url {
     display: inline;
@@ -77,6 +62,7 @@
     font-family: 'Trebuchet MS', sans-serif;
     font-size: large;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .demo-pic {

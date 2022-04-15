@@ -1,3 +1,5 @@
+const port = process.env.PORT || 3000;
+
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -89,7 +91,8 @@ let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
     Messages.init(() => {
-        app.listen(process.env.PORT || 3000);
-        console.log(`Server listening at port ${process.env.PORT || 3000}.`);
+        app.listen(port, () => {
+            console.log(`Server listening at port ${port}.`);
+        });
     });
 });

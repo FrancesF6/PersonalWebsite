@@ -1,25 +1,37 @@
 {
     "steam-game-club": {
-        "name": "Steam Game Club (Under construction)",
+        "name": "STEAM Game Club (Under construction)",
         "language": "JavaScript, Pug, CSS",
-        "time": "Mar 2022 -",
+        "time": "Mar 2022 - Apr 2022",
         "demoURL": "",
         "githubURL": "",
-        "about": "... using SQLite",
+        "about": "A full-stack web application using Node.js and SQLite3",
+        "description": "This web application provides a platform for STEAM video game lovers.<br>The database stores basic information of some STEAM games. Guests can search for games based on game title, genre, company name, or the range of release date. They can also view the games reviews, and see the \"lovers\" of a game. <br>The authenticated (logged-in) users can, on top of that, view information about users whose personal profiles are public, including their names, the games they like, and the game reviews they have posted. They can even follow (or unfollow) other users, like (or unlike) a game, or write (or delete) a game review.",
+        "details": "The project originated from my final project of course \"Database Management Systems\". The project's requirements were mainly about the database, and to create a user interface to access the database. I chose to implement this web club out of personal interest.<br>In addition to the above client-side features, there are some server-side features: <ul class='list'><li>Using argon2 cryptographic hashing algorithm to store the password information of registered users.</li><li>Semi-storing game reviews data in the database, so the database only stores the index information, and the review contents are stored locally on the server (accessed by the index information).</li></ul>",
+        "demoPics": []
+    },
+    
+    "steam-data-extractor": {
+        "name": "STEAM Data Extractor (Under construction)",
+        "language": "Python",
+        "time": "Mar 2022 - Apr 2022",
+        "demoURL": "",
+        "githubURL": "",
+        "about": "",
         "description": "",
         "details": "",
         "demoPics": []
     },
-    
+
     "food-ordering-system": {
         "name": "Food Ordering System",
         "language": "JavaScript, Pug, CSS",
         "time": "Sep 2021 - Dec 2021",
         "demoURL": "https://frances-food-ordering.herokuapp.com",
         "githubURL": "https://github.com/FrancesF6/FoodOrderingSystem",
-        "about": "A full-stack web development project using Node.js and MongoDB",
+        "about": "A full-stack web application using Node.js and MongoDB",
         "description":
-        "This food ordering system simulates online ordering and restaurant data management.<br>A logged-in user can place a new order from a selected restaurant. After the order has successfully placed, the user can rate it. They can also browse the profile and order history of any other user whose profile is set to public.<br>An admin of the system can browse the list of restaurants, add a new restaurant, modify any existing restaurant's basic information or menu, and can also view the sales statistics of all restaurants, such as their most popular dishes.",
+        "This food ordering system simulates online ordering and restaurant data management.<br>A logged-in user can place a new order from a selected restaurant. After the order is successfully placed, the user can rate it. They can also browse the profile and order history of any other user whose profile is set to public.<br>An admin of the system can browse the list of restaurants, add a new restaurant, modify any existing restaurant (including its menu), and can also view the sales statistics of all restaurants, such as their most popular dishes.",
         "details":
         "The project originated from several assignments in the course \"Fundamental of Web Applications\". The assignments' requirements include developing a webpage which allows a user to browse menus for several restaurants, add or remove items and place an order; developing a server capable of tracking sales data for each restaurant, providing functionalities to allow a user to add a new restaurant, modify a restaurant's basic information, add new categories or dishes. They also require support for sessions so that the users can log in, log out, change their privacy settings. The session data, user data and order data should be stored in a local database.<br><br>Besides the assignment requirements, I have added some other features, such as:<ul class='list'><li>Setting three user groups: guest, user and admin. Guests can only browse the user list, users can place new orders, administrators can browse the restaurant list, modify the restaurants, and add new restaurants.</li><li>Setting admin's privileges so that an admin can not only modify the basic information of the restaurant, add new dishes, but can also set whether the restaurant is visible to users, modify or delete any dish in the menu.</li><li>Adding a rating system, so that users can rate their own orders. The server will display the average star rating of each restaurant on the user order page and the restaurant list page.</li><li>Adding some front-end and back-end validations, such as verifying user password security, verifying basic restaurant information, and verifying restaurant menu to ensure the formatting of the menu in the database.</li></ul>",
         "demoPics": [

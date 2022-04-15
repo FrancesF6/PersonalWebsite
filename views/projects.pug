@@ -16,16 +16,17 @@ html(lang="en")
                 .project
                     .label Name: 
                         .name #{project.name}
-                    .label-url URL: 
-                        if project.demoURL
-                            a.url(href=`${project.demoURL}` target="_blank") Demo
-                            | &nbsp; &nbsp;
-                        if project.githubURL
-                            a.url(href=`${project.githubURL}` target="_blank") GitHub
-                    .label Language: 
-                        .language #{project.language}
-                    .label-time Time: 
-                        .time #{project.time}
+                    .info-boxes
+                        .label URL: 
+                            if project.demoURL
+                                a.url(href=`${project.demoURL}` target="_blank") Demo
+                                | &nbsp; &nbsp;
+                            if project.githubURL
+                                a.url(href=`${project.githubURL}` target="_blank") GitHub
+                        .label Language: 
+                            .language #{project.language}
+                        .label Time: 
+                            .time #{project.time}
                     if project.about
                         .label About: 
                             .about #{project.about}

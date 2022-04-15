@@ -1,4 +1,6 @@
 .message {
+    display: flex;
+    flex-direction: column;
     border: 5px double rgb(60,90,170);
     padding: 5px 5px 10px 10px;
     margin: 10px 0px 20px;
@@ -8,12 +10,15 @@
 }
 
 .message .time {
-    position: relative;
-    left: 585px;
-    width: fit-content;
+    text-align: end;
     height: 0px;
     color: rgb(60,90,170);
     font-size: medium;
+}
+
+.message .name, .message .email {
+    padding: 0px 10px;
+    display: inline;
 }
 
 .message .content {
@@ -22,19 +27,24 @@
     font-style: italic;
 }
 
-.message .name, .message .email {
-    padding: 0px 10px;
-    display: inline;
-}
-
 #new-msg-form {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     border: 3px dashed;
     margin: 50px 0px;
     padding: 10px 0px;
     font-family: 'Trebuchet MS', sans-serif;
     font-size: large;
     color: rgb(60,90,170);
+}
+
+#new-msg-form #form-line {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 2.5px 0px;
 }
 
 #new-msg-form .labels {
@@ -51,19 +61,32 @@
     border: 1px solid darkblue;
     text-align: center;
     font-family: 'Inter';
+    width: 50%;
+    min-width: 100px;
+}
+
+#new-msg-form #form-email {
+    min-width: 200px;
 }
 
 #new-msg-form #form-message {
     resize: none;
     vertical-align: middle;
+    margin: 10px 15px 5px;
+    height: 80px;
+    width: 100%;
     border-radius: 5px;
     border: 1px solid darkblue;
-    margin: 10px;
     font-family: 'Inter';
 }
 
 #private-hint:hover {
     cursor: help;
+}
+
+#form-msg-label {
+    align-items: center;
+    margin: 5px 0px 2.5px;
 }
 
 #form-msg-label::before {
