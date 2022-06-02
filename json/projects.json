@@ -1,10 +1,10 @@
 {
     "steam-game-club": {
-        "name": "STEAM Game Club (Under construction)",
+        "name": "STEAM Game Club",
         "language": "JavaScript, Pug, CSS",
         "time": "Mar 2022 - Apr 2022",
-        "demoURL": "",
-        "githubURL": "",
+        "demoURL": "https://steam-gameclub.herokuapp.com",
+        "githubURL": "https://github.com/FrancesF6/STEAM_game_club",
         "about": "A full-stack web application using Node.js and SQLite3",
         "description": "This web application provides a platform for STEAM video game lovers.<br>The database stores basic information of some STEAM games. Guests can search for games based on game title, genre, company name, or the range of release date. They can also view the games reviews, and see the \"lovers\" of a game. <br>The authenticated (logged-in) users can, on top of that, view information about users whose personal profiles are public, including their names, the games they like, and the game reviews they have posted. They can even follow (or unfollow) other users, like (or unlike) a game, or write (or delete) a game review.",
         "details": "The project originated from my final project of course \"Database Management Systems\". The project's requirements were mainly about the database, and to create a user interface to access the database. I chose to implement this web club out of personal interest.<br>In addition to the above client-side features, there are some server-side features: <ul class='list'><li>Using argon2 cryptographic hashing algorithm to store the password information of registered users.</li><li>Semi-storing game reviews data in the database, so the database only stores the index information, and the review contents are stored locally on the server (accessed by the index information).</li></ul>",
@@ -12,14 +12,14 @@
     },
     
     "steam-data-extractor": {
-        "name": "STEAM Data Extractor (Under construction)",
+        "name": "STEAM Data Extractor",
         "language": "Python",
         "time": "Mar 2022 - Apr 2022",
         "demoURL": "",
-        "githubURL": "",
-        "about": "",
-        "description": "",
-        "details": "",
+        "githubURL": "https://github.com/FrancesF6/STEAM_data_extractor",
+        "about": "Several Python scripts to extract STEAM game data and insert into SQLite3 database",
+        "description": "There are six Python scripts in total, four of them are used to retrieve/extract STEAM game data:<br>extract_game_ids.py - download all STEAM game IDs from search and save into a text file;<br>extract_game_data.py - read game IDs, extract the according games data from HTML page, and save to JSON files;<br>extract_game_reviews.py - read game IDs, extracts game reviews & likes data from STEAM's API and save to JSON files, also save review contents into text files, and output a list of userIDs into a text file;<br>extract_user_data.py - read the list of user IDs, extract user data from STEAM's API, save user avatars, and save user data into to a JSON file.<br>The other one, insert_data_sqlite.py, is used to read the extracted data and insert into a SQLite3 databse.",
+        "details": "Please refer to the README file: https://github.com/FrancesF6/STEAM_data_extractor/blob/main/README.md",
         "demoPics": []
     },
 

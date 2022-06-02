@@ -1,7 +1,12 @@
 [
     {
+        "date": "2022-06-01",
+        "title": "Projects Update",
+        "description": "STEAM Game Club and STEAM Data Extractor deployed."
+    },
+    {
         "date": "2022-02-19",
-        "title": "Food Ordering System Updated",
+        "title": "Project Update",
         "description": "Food Ordering System deployed individually."
     },
     {
@@ -11,7 +16,7 @@
     },
     {
         "date": "2021-12-30",
-        "title": "Food Ordering System Completed",
+        "title": "Project Update",
         "description": "Main functionalities of project \"Food Ordering System\" completed."
     }
 ]
